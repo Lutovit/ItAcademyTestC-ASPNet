@@ -1,0 +1,53 @@
+﻿@model ItAcademyTest.Models.TestModel
+@using ItAcademyTest.Helpers
+
+
+
+
+<div>
+    <h3>Ответ найден!</h3>
+    <table>
+
+        <tr>
+            <td><p>Size</p></td>
+
+            <td><p>@Model.Size</p></td>
+        </tr>
+
+        <tr>
+            <td><p>MinValue</p></td>
+
+            <td><p>@Model.MinValue</p></td>
+        </tr>
+
+        <tr>
+            <td><p>MaxValue</p></td>
+
+            <td><p>@Model.MaxValue</p></td>
+        </tr>
+
+        <tr>
+            <td><p>xValue</p></td>
+
+            <td><p>@Model.xValue</p></td>
+        </tr>
+
+        <tr>
+            <td><p>Отсортированный по неубыванию массив целых:</p></td>
+
+            <td><p>@Html.ArrayHelper(Model.ArrayOfInt)</p></td>
+        </tr>
+
+
+        <tr>
+            <td><p>NumberOfFirstElementAboveX  </p></td>
+
+            <td><p>@Model.NumberOfFirstElementAboveX</p></td>
+        </tr>
+
+    </table>
+</div>
+
+<div>
+    <a href="/Home/Index"><button type="button" class="btn btn-warning">Попробовать снова =)</button></a>
+</div>

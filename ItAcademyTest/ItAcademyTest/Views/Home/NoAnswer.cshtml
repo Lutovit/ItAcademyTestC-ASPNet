@@ -1,0 +1,62 @@
+﻿@model ItAcademyTest.Models.TestModel
+@using ItAcademyTest.Helpers
+
+<div>
+    <h3>Не обнаружен элемент больше введенного xValue! Попробуйте задать другие входные параметры. </h3>
+</div>
+
+
+<div>
+    <h3>Введены были следующие данные:</h3>
+    <table>
+
+        <tr>
+            <td><p>Size =</p></td>
+
+            <td><p>@ViewBag.Ob.Size</p></td>
+        </tr>
+
+        <tr>
+            <td><p>MinValue =</p></td>
+
+            <td><p>@ViewBag.Ob.MinValue</p></td>
+        </tr>
+
+        <tr>
+            <td><p>MaxValue =</p></td>
+
+            <td><p>@ViewBag.Ob.MaxValue</p></td>
+        </tr>
+
+        <tr>
+            <td><p>xValue =</p></td>
+
+            <td><p>@ViewBag.Ob.xValue</p></td>
+        </tr>
+    </table>
+
+        
+    <div>
+        <h3>
+            <p>Отсортированный по неубыванию сгенерированный массив целых:</p>
+        </h3>
+    </div>
+
+    <div>
+        <table>
+
+            @foreach (var item in ViewBag.Ob.ArrayOfInt)
+            {
+                <tr>
+                    <td><p>@item</p></td>
+                </tr>
+            }
+
+        </table>
+    </div>
+    
+</div>
+
+<div>
+    <a href="/Home/Index"><button type="button" class="btn btn-warning">Попробовать снова =)</button></a>
+</div>

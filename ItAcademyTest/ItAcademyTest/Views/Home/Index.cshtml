@@ -1,0 +1,48 @@
+﻿@model ItAcademyTest.Models.TestModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Задачка</h2>
+<p>Введите размер массива (Size) целых числе и максимальное значение числа (maxValue) в массиве.</p>
+<p>Массив будет проинициализирован случайными числами от minValue до maxValue.</p>
+<p>далее введите целое число X и нажмите кнопу "Найти". </p>
+<p>Программа выведет массив в отсортированном по неубыванию виде, а так же номер первого элемента больше введенного X</p>
+
+@using (Html.BeginForm("Find", "Home", FormMethod.Post))
+{
+   
+<table>
+    <tr>
+        <td><p> Размер массива </p></td>
+        <td><input type="number" name="Size" /> </td>
+    </tr>
+
+    <tr>
+        <td><p> Минимальное значение в массиве</p></td>
+        <td><input type="number" name="MinValue" /> </td>
+    </tr>
+
+    <tr>
+        <td><p> Максимальное значение в массиве</p></td>
+        <td><input type="number" name="MaxValue" /> </td>
+    </tr>
+
+    <tr>
+        <td><p> Число x </p></td>
+        <td><input type="number" name="xValue" /> </td>
+    </tr>
+
+    <tr>
+        @Html.Hidden("NumberOfFirstElementAboveX", "-1")
+    </tr>
+
+
+    <tr>
+        <td><input type="submit" class="btn btn-success" value="Найти номер элемента массива > x" /> </td>
+        <td></td>
+    </tr>
+</table>
+
+}
